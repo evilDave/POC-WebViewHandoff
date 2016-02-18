@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7997A45EF8CD3B14A9E3F831 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7997AD280F117FAB4AB84898 /* WebViewController.m */; };
 		7997A52CAA4469D6D528A370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7997A4D9FFDAB9A96F96B7F4 /* Assets.xcassets */; };
+		7997A63CB24A6C65206A9C3F /* WKWebView+HotelsCombined.m in Sources */ = {isa = PBXBuildFile; fileRef = 7997A97AD9144C87EDCA5A31 /* WKWebView+HotelsCombined.m */; };
 		7997A6442CABF70C5BC4584E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7997A16D94790C50CE77C4D2 /* main.m */; };
 		7997A77C6934253198131ED0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7997ACE43A1558E320A8B2A7 /* ViewController.m */; };
 		7997A8648A755FC00FEABF27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7997A1BE9C4B610BF9386686 /* AppDelegate.m */; };
@@ -24,7 +25,9 @@
 		7997A3BD81B387F70B0394C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7997A41DC041566FE0FB9E54 /* NSURLRequest+HotelsCombined.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+HotelsCombined.h"; sourceTree = "<group>"; };
 		7997A4D9FFDAB9A96F96B7F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7997A54273B6B07109108F94 /* WKWebView+HotelsCombined.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WKWebView+HotelsCombined.h"; sourceTree = "<group>"; };
 		7997A8B776188206C386C456 /* NSURLRequest+HotelsCombined.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+HotelsCombined.m"; sourceTree = "<group>"; };
+		7997A97AD9144C87EDCA5A31 /* WKWebView+HotelsCombined.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+HotelsCombined.m"; sourceTree = "<group>"; };
 		7997AAA58A8F5B68CC696162 /* WebViewHandoff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewHandoff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7997AAEF0FB85A9AA516D010 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		7997AAF74A9236467BD0DA9D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -87,6 +90,8 @@
 				7997A41DC041566FE0FB9E54 /* NSURLRequest+HotelsCombined.h */,
 				7997AF0E9C8E7F91760E1F42 /* NSURL+HotelsCombined.m */,
 				7997A0FDE44818EDFFFF6BEA /* NSURL+HotelsCombined.h */,
+				7997A97AD9144C87EDCA5A31 /* WKWebView+HotelsCombined.m */,
+				7997A54273B6B07109108F94 /* WKWebView+HotelsCombined.h */,
 			);
 			path = WebViewHandoff;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 				7997A45EF8CD3B14A9E3F831 /* WebViewController.m in Sources */,
 				7997AB41D2E98FC4541ED452 /* NSURLRequest+HotelsCombined.m in Sources */,
 				7997AEEF2920DAB00A5912CC /* NSURL+HotelsCombined.m in Sources */,
+				7997A63CB24A6C65206A9C3F /* WKWebView+HotelsCombined.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

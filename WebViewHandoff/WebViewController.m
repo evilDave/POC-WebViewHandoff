@@ -5,8 +5,7 @@
 
 #import "WebViewController.h"
 #import "NSURLRequest+HotelsCombined.h"
-
-@import WebKit;
+#import "WKWebView+HotelsCombined.h"
 
 @interface WebViewController () <WKNavigationDelegate>
 @end
@@ -29,10 +28,15 @@
 	[[_webView trailingAnchor] constraintEqualToAnchor:[self.view trailingAnchor]].active = YES;
 	[[_webView topAnchor] constraintEqualToAnchor:[self.view topAnchor]].active = YES;
 	[[_webView bottomAnchor] constraintEqualToAnchor:[self.view bottomAnchor]].active = YES;
+
+	[_webView loadLoadingPage];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+	[_webView loadLoadingPage];
 }
 
 - (void)load:(NSString *)uri {
-	self.view; // TODO: don't do this
 	NSURL *url = [[NSURL alloc] initWithString:uri];
 	NSURLRequest *request = [NSURLRequest requestWithURL:url];
 	[_webView loadRequest:request];
@@ -40,7 +44,7 @@
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
 	if([[navigationAction request] isHomePage]) {
-		[_webView loadHTMLString:@"" baseURL:[NSURL URLWithString:@""]];
+		[_webView loadBlankPage];
 		[self.navigationController popViewControllerAnimated:YES];
 		decisionHandler(WKNavigationActionPolicyCancel);
 	}
@@ -49,22 +53,22 @@
 	}
 }
 
-- (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation {
-}
-
-- (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error {
-}
-
-- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-}
-
-- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error {
-}
-
-- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
-}
-
-- (void)webViewWebContentProcessDidTerminate:(WKWebView *)webView {
-}
+//- (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation {
+//}
+//
+//- (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error {
+//}
+//
+//- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+//}
+//
+//- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error {
+//}
+//
+//- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
+//}
+//
+//- (void)webViewWebContentProcessDidTerminate:(WKWebView *)webView {
+//}
 
 @end

@@ -8,7 +8,9 @@
 
 
 @implementation NSURLRequest (HotelsCombined)
+
 - (BOOL)isHomePage {
 	return [self.URL isEquivalentTo:[[NSURL alloc] initWithString:@"https://www.hotelscombined.com/"]];
 }
+
 @end

@@ -10,4 +10,5 @@
 @interface WebViewController : UIViewController
 
 - (void)load:(NSString *)url;
+
 @end

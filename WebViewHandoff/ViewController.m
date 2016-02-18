@@ -44,6 +44,9 @@
 	[[_searchButton topAnchor] constraintEqualToAnchor:[_placeTextField bottomAnchor]].active = YES;
 	[[_searchButton centerXAnchor] constraintEqualToAnchor:[self.view centerXAnchor]].active = YES;
 	[[_searchButton widthAnchor] constraintEqualToAnchor:[self.view widthAnchor]].active = YES;
+
+	_webViewController = [[WebViewController alloc] init];
+	_webViewController.view; // TODO: don't do this
 }
 
 - (void)search {
@@ -51,9 +54,6 @@
 	// TODO: will actually send a message to the webview with the data in it and let it set the url
 	NSString *url = [NSString stringWithFormat:@"https://www.hotelscombined.com/Hotels/Search?destination=%@&checkin=2016-12-15&checkout=2016-12-16&Rooms=1&adults_1=2", [_placeTextField.text stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
 
-	if(!_webViewController) {
-		_webViewController = [[WebViewController alloc] init];
-	}
 	[_webViewController load:url]; // TODO: this is dodgy as the view is not loaded yet, this will be better when it's handled properly
 	[self.navigationController pushViewController:_webViewController animated:YES];
 }
